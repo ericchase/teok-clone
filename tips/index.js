@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import styles from '../../styles/General.module.css'
-import { StartButton } from '../../comps/buttons';
-import { NavBar } from '../../comps/navbar';
+import { StartButton } from '../comps/buttons';
+import { NavBar } from '../comps/navbar';
 
 
 

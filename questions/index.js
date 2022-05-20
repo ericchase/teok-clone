@@ -52,13 +52,13 @@ const SmallButton4 = styled.button`
     left: 110px;
 `
 
-export default function Questions(){
+export default function Questions() {
 
   const an = GetAnswers();
   const r = useRouter();
 
-  var {qnum} = r.query;
-  if(qnum === undefined){
+  var { qnum } = r.query;
+  if (qnum === undefined) {
     qnum = 0;
   }
 
@@ -66,59 +66,59 @@ export default function Questions(){
     {/* <hr />
     Answer Some Questions */}
 
-{/* className="preBtn" */}
+    {/* className="preBtn" */}
 
 
-<div className={styles.nav}>
-  <NavBar></NavBar>
-</div>
+    <div className={styles.nav}>
+      <NavBar></NavBar>
+    </div>
 
-<Bubble>
-  <img src="/bubble.png" alt="Dialogue bubble" />   
-  <text className={styles.bubbleText}>
-  </text> 
-  <img id={styles.logo} src="/logo.png" alt="Teok Logo" /> 
-</Bubble>
+    <Bubble>
+      <img src="/bubble.png" alt="Dialogue bubble" />
+      <text className={styles.bubbleText}>
+      </text>
+      <img id={styles.logo} src="/logo.png" alt="Teok Logo" />
+    </Bubble>
 
-<Options 
+    <Options
       q={qs[qnum].title}
-      arr={qnum== 2? qs[qnum][an.temp] : qs[qnum].ops}
+      arr={qnum == 2 ? qs[qnum][an.temp] : qs[qnum].ops}
     />
 
-<div className={styles.itemList1}>
-  {
-    Number(qnum) < qs.length - 1 &&
-    <SmallButton3 onClick={
-      ()=>r.back({
-        pathname:"/questions",
-        query:{
-          qnum:Number(qnum)+1 > qs.length - 1 ? qs.length-1 : Number(qnum)+1
-        }
-      })
-    }>Previous</SmallButton3>
-  }
-</div>
+    <div className={styles.itemList1}>
+      {
+        Number(qnum) < qs.length - 1 &&
+        <SmallButton3 onClick={
+          () => r.back({
+            pathname: "/questions",
+            query: {
+              qnum: Number(qnum) + 1 > qs.length - 1 ? qs.length - 1 : Number(qnum) + 1
+            }
+          })
+        }>Previous</SmallButton3>
+      }
+    </div>
 
-<div className={styles.itemList2}>
-  {
-    Number(qnum) < qs.length - 1 &&
-      <SmallButton3 onClick={
-        ()=>r.push({
-          pathname:"/questions",
-          query:{
-            qnum:Number(qnum)+1 > qs.length - 1 ? qs.length-1 : Number(qnum)+1
-        }
-      })
-    }>Next</SmallButton3>
-  }
-</div>
+    <div className={styles.itemList2}>
+      {
+        Number(qnum) < qs.length - 1 &&
+        <SmallButton3 onClick={
+          () => r.push({
+            pathname: "/questions",
+            query: {
+              qnum: Number(qnum) + 1 > qs.length - 1 ? qs.length - 1 : Number(qnum) + 1
+            }
+          })
+        }>Next</SmallButton3>
+      }
+    </div>
 
-{
-  Number(qnum) >= qs.length - 1 &&
-  <SmallButton4 onClick={
-    ()=>r.push("/questions/results")
-  }>Get Tips!</SmallButton4>
-}
+    {
+      Number(qnum) >= qs.length - 1 &&
+      <SmallButton4 onClick={
+        () => r.push("/questions/results")
+      }>Get Tips!</SmallButton4>
+    }
 
   </div>
 }

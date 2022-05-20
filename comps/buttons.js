@@ -179,7 +179,7 @@ export function TenMinButton() {
 export function StartButton() {
     const r = useRouter();
     return <GreenButton onClick={
-        () => r.push("/questions")}>
+        () => r.push('/questions')}>
         Start
     </GreenButton>
 }
@@ -272,39 +272,6 @@ export function NextButton2() {
         () => r.push("/relax_duration")}>
         Next
     </SmallButton2>
-}
-
-export function SmallBtn() {
-    const r = useRouter();
-    return <SmallButton3 onClick={
-        () => r.push("/questionB")}>
-        Next
-    </SmallButton3>
-}
-
-export function SmallBtn2() {
-    const r = useRouter();
-    return <SmallButton3 onClick={
-        () => r.push("/questionA")}>
-        Previous
-    </SmallButton3>
-}
-
-export function SmallBtn3() {
-
-    const r = useRouter();
-    return <SmallButton3 onClick={
-        () => r.push("/questionC")}>
-        Next
-    </SmallButton3>
-}
-
-export function SmallBtn4() {
-    const r = useRouter();
-    return <SmallButton3 onClick={
-        () => r.push("/questionD")}>
-        Next
-    </SmallButton3>
 }
 
 export function SmallBtn5() {
