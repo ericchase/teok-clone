@@ -151,50 +151,51 @@ const Arrow = styled.div`
 //     margin-top:30px;
 // `
 
-export function TwoMinButton(){
+export function TwoMinButton() {
     const r = useRouter();
     return <BlueButton onClick={
-        ()=>r.push('/relax_twomin')}>
+        () => r.push('/relax_twomin')}>
         2-min
     </BlueButton>
-}    
+}
 
-export function FiveMinButton(){
+export function FiveMinButton() {
     const r = useRouter();
     return <BlueButton onClick={
-        ()=>r.push('/relax_fivemin')}>
+        () => r.push('/relax_fivemin')}>
         5-min
     </BlueButton>
-}    
+}
 
-export function TenMinButton(){
+export function TenMinButton() {
     const r = useRouter();
     return <BlueButton onClick={
-        ()=>r.push('/relax_tenmin')}>
+        () => r.push('/relax_tenmin')}>
         10-min
     </BlueButton>
 }
 
 
-export function StartButton(){
+export function StartButton() {
     const r = useRouter();
     return <GreenButton onClick={
-        ()=>r.push("/questions")}>
+        () => r.push("/questions")}>
         Start
     </GreenButton>
-}    
+}
 
 
-export function ChangeMusicButton(){
+export function ChangeMusicButton() {
     const r = useRouter();
-    return <GreenButtonChangeMusic onClick={()=>
-    {r.push("/start_relax");
-    var audio = document.getElementById('ai');
-    audio.pause()}
+    return <GreenButtonChangeMusic onClick={() => {
+        r.push("/start_relax");
+        var audio = document.getElementById('ai');
+        audio.pause()
+    }
     }>
         Change Music
     </GreenButtonChangeMusic>
-}  
+}
 
 
 // export function StartButtonWithIcon(){
@@ -214,99 +215,102 @@ export function ChangeMusicButton(){
 // }
 
 
-export function NextButton(){
+export function NextButton() {
     const r = useRouter();
     return <BlueButton onClick={
-        ()=>r.push("/start_relax")}>
+        () => r.push("/start_relax")}>
         Next
     </BlueButton>
 }
 
-export function NatureButton(){
+export function NatureButton() {
     const r = useRouter();
     return <BlueButton2 onClick={
-        ()=>r.push("/nature")}>
+        () => r.push("/nature")}>
         Natural
     </BlueButton2>
 }
 
-export function MusicButton(){
+export function MusicButton() {
     const r = useRouter();
     return <BlueButton2 onClick={
-        ()=>r.push("/music")}>
+        () => r.push("/music")}>
         Instrumental
     </BlueButton2>
 }
 
-export function GetTip(){
+export function GetTip() {
     const r = useRouter();
     return <GetTipButton onClick={
-        ()=>r.push("/tips")}>
+        () => r.push("/tips")}>
         Get Tips
     </GetTipButton>
 }
 
-export function LeftArrow(){
+export function LeftArrow() {
     const r = useRouter();
     return <Arrow onClick={
-        ()=> r.back()}>
-        <img src="/leftarrow.png" alt="back icon" /> 
+        () => r.back()}>
+        <img src="/leftarrow.png" alt="back icon" />
     </Arrow>
 }
-export function LeftArrowForMusic(){
+export function LeftArrowForMusic() {
     const r = useRouter();
     return <Arrow onClick={
-        ()=> {r.back(); 
-        var audio = document.getElementById('ai');
-        audio.pause()}}>
-        <img src="/leftarrow.png" alt="back icon" /> 
+        () => {
+            r.back();
+            var audio = document.getElementById('ai');
+            audio.pause()
+        }}>
+        <img src="/leftarrow.png" alt="back icon" />
     </Arrow>
 }
 
-export function NextButton2(){
+export function NextButton2() {
     const r = useRouter();
     return <SmallButton2 onClick={
-        ()=>r.push("/relax_duration")}>
-            Next
+        () => r.push("/relax_duration")}>
+        Next
     </SmallButton2>
 }
 
-// export function SmallBtn(){
+export function SmallBtn() {
+    const r = useRouter();
+    return <SmallButton3 onClick={
+        () => r.push("/questionB")}>
+        Next
+    </SmallButton3>
+}
 
-//     const r = useRouter();
-//     return <SmallButton3 onClick={
-//         ()=>r.push("/questionB")}>
-//             Next
-//     </SmallButton3>
-// }
-// export function SmallBtn2(){
-//     const r = useRouter();
-//     return <SmallButton3 onClick={
-//         ()=>r.push("/questionA")}>
-//             Previous
-//     </SmallButton3>
-// }
-// export function SmallBtn3(){
+export function SmallBtn2() {
+    const r = useRouter();
+    return <SmallButton3 onClick={
+        () => r.push("/questionA")}>
+        Previous
+    </SmallButton3>
+}
 
-//     const r = useRouter();
-//     return <SmallButton3 onClick={
-//         ()=>r.push("/questionC")}>
-//             Next
-//     </SmallButton3>
-// }
+export function SmallBtn3() {
 
-// export function SmallBtn4(){
-//     const r = useRouter();
-//     return <SmallButton3 onClick={
-//         ()=>r.push("/questionD")}>
-//             Next
-//     </SmallButton3>
-// }
+    const r = useRouter();
+    return <SmallButton3 onClick={
+        () => r.push("/questionC")}>
+        Next
+    </SmallButton3>
+}
 
-// export function SmallBtn5(){
-//     const r = useRouter();
-//     return <SmallButton3 onClick={
-//         ()=>r.push("/relax_duration")}>
-//             Next
-//     </SmallButton3>
-// }
+export function SmallBtn4() {
+    const r = useRouter();
+    return <SmallButton3 onClick={
+        () => r.push("/questionD")}>
+        Next
+    </SmallButton3>
+}
+
+export function SmallBtn5() {
+    const r = useRouter();
+    return <SmallButton3 onClick={
+        () => r.push("/relax_duration")}>
+        Next
+    </SmallButton3>
+}
